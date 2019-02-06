@@ -1,6 +1,6 @@
 /* 9. Print out quote w/o using printf or puts */
 
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - will print as error msg
