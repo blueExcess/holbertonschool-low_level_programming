@@ -1,0 +1,15 @@
+/* 9. Print out quote w/o using printf or puts */
+
+#include <stdio.h>
+
+/** main - will print as error msg
+ *
+ * Return: will give 1
+ */
+
+int main(void)
+{
+    system( "echo and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+
+    return (1);
+}
