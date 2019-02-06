@@ -1,9 +1,7 @@
-/**
- * main - entry point
- *
- * Return: Always 0 (success)
- */
+/* for testing */
+
+#include <stdio.h>
 
 int main (void) {
-	return (0);
+	return 0;
 }
