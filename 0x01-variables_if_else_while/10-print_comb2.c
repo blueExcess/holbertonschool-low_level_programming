@@ -20,8 +20,11 @@ int main(void)
 		{
 			putchar(x);
 			putchar(y);
-			putchar(',');
-			putchar(' ');
+			if (x != '9' || y != '9')
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 		y = 0;
 	}
