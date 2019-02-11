@@ -4,7 +4,6 @@
 
 /**
  * _isalpha - check if a var is alphabetic
- * @c: character passed to function
  *
  * Return: 1 if letter, 0 otherwise
  */
