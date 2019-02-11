@@ -1,0 +1,9 @@
+/* 0. putchar: print a line to stdout */
+
+#include <stdio.h>
+
+int main(void)
+{
+	puts("Holberton");
+	return (0);
+}

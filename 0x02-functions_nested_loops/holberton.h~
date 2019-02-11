@@ -1,0 +1,5 @@
+/* Holberton header file -
+ * include all protypes of functions
+ */
+
+int _putchar(char c);
