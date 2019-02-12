@@ -1,6 +1,6 @@
 /* 5. Sign - print sign of a number */
 
-#define "holberton.h"
+#include "holberton.h"
 
 /**
  * print_sign - print sign of number
