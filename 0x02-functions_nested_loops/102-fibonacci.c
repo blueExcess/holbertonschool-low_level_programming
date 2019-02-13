@@ -18,7 +18,7 @@ int main(void)
 	for (i = 2; i < 51; i++)
 		fib[i] = fib[i - 2] + fib[i - 1];
 	for (i = 1; i < 51; i++)
-		printf("%lu\n", fib[i]);
+		printf("%lu, ", fib[i]);
 	printf("\n");
 	return (0);
 }
