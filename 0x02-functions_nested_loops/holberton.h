@@ -1,10 +1,10 @@
+#ifndef _HOLBERTON_H
+#define _HOLBERTON_H
+
 /* Holberton header file -
  * for 0x02 C: functions, nested loops
  * include all protypes of functions
  */
-
-#ifndef _HOLBERTON_H
-#define _HOLBERTON_H
 
 
 int _putchar(char c);
@@ -21,3 +21,6 @@ int add(int x, int y);
 void print_to_98(int n);
 
 #endif /* holberton.h */
+
+
+

@@ -1,0 +1,11 @@
+/* 9. print out 9's times table in matrix form */
+
+#include "holberton.h"
+
+/**
+ * times_table - return formatted times table for 9
+ *
+ * Return: nothing
+ */
+void times_table(void)
+{
