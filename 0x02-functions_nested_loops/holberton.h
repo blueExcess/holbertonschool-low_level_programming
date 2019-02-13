@@ -20,7 +20,7 @@ void times_table(void);
 int add(int x, int y);
 void print_to_98(int n);
 
+/* below: advanced questions */
+void print_times_table(int n);
+
 #endif /* holberton.h */
-
-
-
