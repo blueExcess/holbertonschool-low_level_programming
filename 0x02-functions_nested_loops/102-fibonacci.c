@@ -17,9 +17,9 @@ int main(void)
 
 	for (i = 2; i < 53; i++)
 		fib[i] = fib[i - 2] + fib[i - 1];
-	for (i = 2; i < 53; i++)
+	for (i = 2; i < 52; i++)
 	{
-		if (i == 52)
+		if (i == 51)
 			printf("%lu\n", fib[i]);
 		else
 			printf("%lu, ", fib[i]);
