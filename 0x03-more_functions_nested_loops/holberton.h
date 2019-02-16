@@ -20,6 +20,7 @@ void print_square(int size);
 
 
 void print_number(int n);
+void print_unumber(unsigned int n);
 
 
 #endif /* holberton.h */
