@@ -1,0 +1,12 @@
+/* 7. print diagonal line n length */
+
+#include "holberton.h"
+
+/**
+ * print_diagonal - print diagonal line n length
+ * @n: width
+ *
+ * Return: none
+ */
+void print_diagonal(int n)
+{
