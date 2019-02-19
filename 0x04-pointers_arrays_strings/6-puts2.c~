@@ -1,0 +1,15 @@
+/* 6. Print out every other word from a string */
+
+#include "holberton.h"
+
+/**
+ * puts2 - print every other character
+ * @str: string to print
+ *
+ * Return: none
+ */
+void puts2(char *str)
+{
+	char *length = s;
+
+	while (

@@ -10,5 +10,14 @@
  */
 void puts2(char *str)
 {
+	int position;
 
-	while 
+	while (*str)
+	{
+		position++;
+		if (position % 2)
+			_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
+}
