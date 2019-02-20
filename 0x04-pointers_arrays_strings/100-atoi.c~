@@ -1,0 +1,6 @@
+/* 10 (advanced) - mimic function of atoi() */
+
+#include "holberton.h"
+
+/**
+ * _atoi
