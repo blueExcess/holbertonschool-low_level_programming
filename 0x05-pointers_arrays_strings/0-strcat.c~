@@ -1,0 +1,13 @@
+/* 0. write a program to mimic function 'strcat()' */
+
+#include "holberton.h"
+
+/**
+ * _strcat - concatonate two strings
+ * @dest: destination
+ * @src: source
+ *
+ * Return: character (dest)
+ */
+char *_strcat(char *dest, char *src)
+{
