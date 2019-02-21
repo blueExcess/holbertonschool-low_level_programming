@@ -16,6 +16,8 @@ char *cap_string(char *s)
 
 	while (*p)
 	{
+		if (p == s && *p >= 'a' && *p <= 'z')
+			p[0] -= 32;
 		while (*seper)
 		{
 			if (*p == *seper && p[1] >= 'a' && p[1] <= 'z')
