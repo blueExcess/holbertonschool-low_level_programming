@@ -1,0 +1,30 @@
+/* 6. function that capitalizes all words of a string */
+#include "holberton.h"
+
+/**
+ * cap_string - capitalize all words of a string
+ * @s: string to modify
+ *
+ * Return: string
+ */
+char *cap_string(char *s)
+{
+	char *p = s, *seper = sep;
+	int x = 0;
+	char sep[] =
+		{' ', '\t', '\n', ',', ';', '.', '!',
+		 '?', '"', '(', ')', '{', '}', '\0'};
+
+	while (*p)
+	{
+		while(*seper)
+		{
+			if (*p == *seper && p[x+1] > 'A' && p[x+1] < 'Z')
+				p[x+1] -= 32;
+			seper++;
+		}
+		x++;
+		p++;
+	}
+	return (p);
+}
