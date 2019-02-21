@@ -1,0 +1,6 @@
+/* 4. make a function that reverses an array of ints */
+
+#include "holberton.h"
+
+/**
+ *
