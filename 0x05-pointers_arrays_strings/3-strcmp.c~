@@ -1,0 +1,6 @@
+/* 3. mimic function 'strcmp()' */
+
+#include "holberton.h"
+
+/**
+ * _strcmp - 
