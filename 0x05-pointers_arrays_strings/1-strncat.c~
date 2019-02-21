@@ -1,0 +1,28 @@
+/* 1. mimic function strncat() - copy from source only to n bytes */
+
+#include "holberton.h"
+
+/**
+ * _strncat - concatenate two strings to n bytes
+ * @dest: destination array
+ * @src: source
+ * @n: how many bytes of src to use
+ *
+ * Return: dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	char *dest_end = dest, *src_end = src;
+	int i = 0;
+
+	while (*dest)
+		dest++;
+
+	while (i != n)
+	{
+		*dest = *src;
+		src++;
+		dest++;
+		i++;
+	}
+	return (dest);
