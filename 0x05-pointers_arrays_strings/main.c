@@ -9,11 +9,22 @@
 int main(void)
 {
 	char s[] =
-"Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+"ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple l\n";
 	char *p;
 
-	p = leet(s);
+	p = rot13(s);
 	printf("%s", p);
+	printf("------------------------------------\n");
+	printf("%s", s);
+	printf("------------------------------------\n");
+	p = rot13(s);
+	printf("%s", p);
+	printf("------------------------------------\n");
+	printf("%s", s);
+	printf("------------------------------------\n");
+	p = rot13(s);
+	printf("%s", p);
+	printf("------------------------------------\n");
 	printf("%s", s);
 	return (0);
 }
