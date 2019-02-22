@@ -12,7 +12,7 @@ char *rot13(char *str)
 	char letters[] =
 "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMabcdefghijklmnopqrstuvwxyzabcdefghijklm"
 		;
-	char *s = str, *let = letters;
+	char *s = str, *let = letters, *o = letters;
 	int position = 0;
 
 	while (*s)
@@ -20,7 +20,7 @@ char *rot13(char *str)
 		for (position = 13; *let; let++, position++)
 		{
 			if (*s == *let)
-				*s = let[position];
+				*s = o[position];
 		}
 		let = letters;
 		s++;
