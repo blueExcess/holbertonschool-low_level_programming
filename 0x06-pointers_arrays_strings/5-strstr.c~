@@ -1,0 +1,29 @@
+/* 5. function to mimic 'strstr()' */
+#include "holberton.h"
+
+/**
+ * _strstr - find first instance of string matching
+ * @haystack: string to search
+ * @needle: string to match
+ *
+ * Return: string from point of match
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	char *h = haystack, *n = needle;
+
+	while (*haystack)
+	{
+		h++;
+		while (*n)
+		{
+			if (*h == *n)
+			{
+				while (*h == *n)
+				{
+					h++;
+					n++;
+				}
+			}
+		}
+		return (haystack);
