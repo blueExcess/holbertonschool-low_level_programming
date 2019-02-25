@@ -1,0 +1,5 @@
+/* 0. make function to mimic 'memset()' */
+#include "holberton.h"
+
+/**
+ * _memset - 
