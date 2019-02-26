@@ -20,6 +20,7 @@ char *rot13(char *str)
 		{
 			if (*s == *let)
 				*s = *r;
+				break;
 		}
 		let = letters;
 		r = rot;
