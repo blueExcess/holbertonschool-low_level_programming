@@ -1,0 +1,17 @@
+/* 0. recursive function that prints a string followed by a newline */
+#include "holberton.h"
+
+/**
+ * _puts_recursion - mimic puts via recursion
+ * @s: string to print
+ *
+ * Return: void
+ */
+void _puts_recursion(char *s)
+{
+	if (*s)
+	{
+		_putchar(s);
+		s++;
+	}
+}
