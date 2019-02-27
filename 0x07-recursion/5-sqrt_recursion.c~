@@ -1,0 +1,11 @@
+/* 5. function to return sqroot of natural number */
+#include "holberton.h"
+
+/**
+ * _sqrt_recursion - return sqrt
+ * @n: number to find sqrt of
+ *
+ * Return: value
+ */
+int _sqrt_recursion(int n)
+{
