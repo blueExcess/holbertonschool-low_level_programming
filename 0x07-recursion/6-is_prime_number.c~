@@ -1,0 +1,11 @@
+/* 6. test to see if number is prime */
+#include "holberton.h"
+
+/**
+ * is_prime_number - test to see if number is prime
+ * @n: number to test
+ *
+ * Return: 1 if prime, else 0
+ */
+int is_prime_number(int n)
+{
