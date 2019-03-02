@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	if (argc == 1)
 	{
 		puts("0");
-		return (1);
+		return (2);
 	}
 /* need error case (print "Error" ret 1) for args not numbers */
 	while (count-- > 1)
