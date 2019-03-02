@@ -1,0 +1,17 @@
+/* 1. program that prints number of arguments passed */
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * main - print number of args passed
+ * @argc: number of args passed
+ * @argv: arguments
+ *
+ * Return: 0 on success
+ */
+int main(int argc, char __attribute__((unused))**argv)
+{
+	printf("%d\n", argc);
+
+	return (0);
+}
