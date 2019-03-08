@@ -1,8 +1,16 @@
+/* 2. Function to mimic calloc()  */
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
 
+/**
+ * _calloc - mimic function calloc()
+ * @nmemb: number of spaces
+ * @size: size of spaces
+ *
+ * Return: void
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i = 0;

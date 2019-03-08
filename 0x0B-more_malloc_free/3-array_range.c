@@ -1,7 +1,15 @@
+/* 3. create an array of integers from x to y in size */
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
 
+/**
+ * array_range - create an array of ints
+ * @min: starting point
+ * @max: end point
+ *
+ * Return: pointer to int (beginning of array)
+ */
 int *array_range(int min, int max)
 {
 	int i, x = 0;
