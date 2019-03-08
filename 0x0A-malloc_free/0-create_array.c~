@@ -1,0 +1,6 @@
+/* 0. create an array of characters */
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * create_array - 
