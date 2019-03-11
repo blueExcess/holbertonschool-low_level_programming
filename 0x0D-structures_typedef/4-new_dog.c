@@ -4,22 +4,32 @@
 #include "dog.h"
 
 /**
- * count - count stuff
+ * countAndPoint - count stuff then point
  * @s: string to count
  *
  * Return: length of string
  */
-int count(char *s)
+int *countAndPoint(char *s)
 {
 	char *p = s;
-	int x = 0;
+	int x = 0, z = 0;;
 
+	if (s == NULL)
+		return (NULL);
 	while (*p)
 	{
 		p++;
 		x++;
 	}
-	return (x);
+	p = s;
+	p = malloc((sizeof(*p) * x) + 1);
+	while (z <= x)
+	{
+		p[z] = s[z];
+		z++;
+	}
+	p[z] = 0;
+	return (p);
 }
 
 /**
@@ -33,26 +43,25 @@ int count(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *cpN, *cpO;
-	int x = 0, y = 0, z = 0;
 	dog_t *ret;
 
-	x = count(name);
-	y = count(owner);
-	cpN = malloc(sizeof(cpN) * x);
-	cpO = malloc(sizeof(cpO) * y);
-	ret = malloc(sizeof(*ret));
-	if (ret == NULL || cpN == NULL || cpO == NULL)
-		return (NULL);
-	while (z <= x)
+	cpN = countAndPoint(name);
+	if (cpN == NULL)
 	{
-		cpN[z] = name[z];
-		z++;
+		free(cpN);
+		return(NULL);
 	}
-	z = 0;
-	while (z <= y)
+	cpO = countAndPoint(owner);
+	if (cpO == NULL)
 	{
-		cpO[z] = owner[z];
-		z++;
+		free(cpO);
+		return(NULL);
+	}
+	ret = malloc(sizeof(*ret));
+	if (ret == NULL)
+	{
+		free(ret);
+		return (NULL);
 	}
 	ret->name = name;
 	ret->age = age;
