@@ -41,7 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	cpN = malloc(sizeof(cpN) * x);
 	cpO = malloc(sizeof(cpO) * y);
 	ret = malloc(sizeof(*ret));
-	if (ret == NULL)
+	if (ret == NULL || cpN == NULL || cpO == NULL)
 		return (NULL);
 	while (z <= x)
 	{
@@ -54,7 +54,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		cpO[z] = owner[z];
 		z++;
 	}
-
 	ret->name = name;
 	ret->age = age;
 	ret->owner = owner;
