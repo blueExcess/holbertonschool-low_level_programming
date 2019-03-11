@@ -1,0 +1,17 @@
+/* 2. print struct dog */
+#include <stdio.h>
+#include "dog.h"
+
+/**
+ * print_dog - print structure
+ * @d: structure to print
+ *
+ * Return: void
+ */
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+		return;
+	/* null check for elements */
+
+	printf("Name: %s\nAge: %.1f\nOwner: %s\n", d.name, d.age, d.owner);
