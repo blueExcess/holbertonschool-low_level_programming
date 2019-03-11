@@ -4,6 +4,25 @@
 #include "dog.h"
 
 /**
+ * count - count stuff
+ * @s: string to count
+ *
+ * Return: length of string
+ */
+int count(char *s)
+{
+	char *p = s;
+	int x = 0;
+
+	while (*p)
+	{
+		p++;
+		x++;
+	}
+	return (x);
+}
+
+/**
  * new_dog - create new structure
  * @name: name of dog
  * @age: age of dog
@@ -13,27 +32,17 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *n = name, *o = owner, *cpN, *cpO;
+	char *cpN, *cpO;
 	int x = 0, y = 0, z = 0;
 	dog_t *ret;
 
-	if (name == NULL || owner == NULL)
-
-	while (*n)
-	{
-		n++;
-		x++;
-	}
-	while (*o)
-	{
-		o++;
-		y++;
-	}
+	x = count(name);
+	y = count(owner);
 	cpN = malloc(sizeof(cpN) * x);
 	cpO = malloc(sizeof(cpO) * y);
 	ret = malloc(sizeof(*ret));
-	n = name;
-	o = owner;
+	if (ret == NULL)
+		return (NULL);
 	while (z <= x)
 	{
 		cpN[z] = name[z];
