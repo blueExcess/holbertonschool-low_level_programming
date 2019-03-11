@@ -9,10 +9,10 @@
  *
  * Return: length of string
  */
-int *countAndPoint(char *s)
+char *countAndPoint(char *s)
 {
 	char *p = s;
-	int x = 0, z = 0;;
+	int x = 0, z = 0;
 
 	if (s == NULL)
 		return (NULL);
@@ -49,13 +49,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (cpN == NULL)
 	{
 		free(cpN);
-		return(NULL);
+		return (NULL);
 	}
 	cpO = countAndPoint(owner);
 	if (cpO == NULL)
 	{
 		free(cpO);
-		return(NULL);
+		return (NULL);
 	}
 	ret = malloc(sizeof(*ret));
 	if (ret == NULL)
@@ -63,8 +63,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ret);
 		return (NULL);
 	}
-	ret->name = name;
+	ret->name = cpN;
 	ret->age = age;
-	ret->owner = owner;
+	ret->owner = cpO;
 	return (ret);
 }
