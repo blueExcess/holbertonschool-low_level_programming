@@ -71,6 +71,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 		ret->owner = cpO;
 	}
-	ret->age = age;
+	if (age > 0.0)
+		ret->age = age;
 	return (ret);
 }
