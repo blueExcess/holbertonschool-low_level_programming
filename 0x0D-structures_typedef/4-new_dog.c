@@ -45,26 +45,26 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpN, *cpO;
 	dog_t *ret;
 
+	ret = malloc(sizeof(ret));
+	if (ret == NULL)
+		return (NULL);
+	ret->name = NULL;
 	cpN = countAndPoint(name);
 	if (cpN == NULL)
-	{
-		free(cpN);
-		return (NULL);
-	}
-	cpO = countAndPoint(owner);
-	if (cpO == NULL)
-	{
-		free(cpO);
-		return (NULL);
-	}
-	ret = malloc(sizeof(*ret));
-	if (ret == NULL)
 	{
 		free(ret);
 		return (NULL);
 	}
 	ret->name = cpN;
-	ret->age = age;
+	cpO = countAndPoint(owner);
+	ret->owner = NULL;
+	if (cpO == NULL)
+	{
+		free(ret->name);
+		free(ret);
+		return (NULL);
+	}
 	ret->owner = cpO;
+	ret->age = age;
 	return (ret);
 }
