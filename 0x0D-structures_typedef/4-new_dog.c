@@ -21,6 +21,8 @@ char *countAndPoint(char *s)
 		x++;
 	}
 	p = malloc(sizeof(*p) * x + 1);
+	if (p == NULL)
+		return (NULL);
 	while (s[z])
 	{
 		p[z] = s[z];
@@ -47,7 +49,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ret == NULL)
 		return (NULL);
 	ret->name = NULL;
-	if (name != NULL)
+	if (name)
 	{
 		cpN = countAndPoint(name);
 		if (cpN == NULL)
@@ -58,7 +60,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		ret->name = cpN;
 	}
 	ret->owner = NULL;
-	if (owner != NULL)
+	if (owner)
 	{
 		cpO = countAndPoint(owner);
 		if (cpO == NULL)
