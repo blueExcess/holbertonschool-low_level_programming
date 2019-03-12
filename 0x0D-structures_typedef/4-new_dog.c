@@ -7,7 +7,7 @@
  * countAndPoint - count stuff then point
  * @s: string to count
  *
- * Return: length of string
+ * Return: length of string and copy
  */
 char *countAndPoint(char *s)
 {
@@ -23,12 +23,12 @@ char *countAndPoint(char *s)
 	}
 	p = s;
 	p = malloc((sizeof(*p) * x) + 1);
-	while (z <= x)
+	while (p[z])
 	{
 		p[z] = s[z];
 		z++;
 	}
-	p[z] = 0;
+	p[z] = '\0';
 	return (p);
 }
 
@@ -49,22 +49,28 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ret == NULL)
 		return (NULL);
 	ret->name = NULL;
-	cpN = countAndPoint(name);
-	if (cpN == NULL)
+	if (name != NULL)
 	{
-		free(ret);
-		return (NULL);
+		cpN = countAndPoint(name);
+		if (cpN == NULL)
+		{
+			free(ret);
+			return (NULL);
+		}
+		ret->name = cpN;
 	}
-	ret->name = cpN;
-	cpO = countAndPoint(owner);
 	ret->owner = NULL;
-	if (cpO == NULL)
+	if (owner != NULL)
 	{
-		free(ret->name);
-		free(ret);
-		return (NULL);
+		cpO = countAndPoint(owner);
+		if (cpO == NULL)
+		{
+			free(ret->name);
+			free(ret);
+			return (NULL);
+		}
+		ret->owner = cpO;
 	}
-	ret->owner = cpO;
 	ret->age = age;
 	return (ret);
 }
