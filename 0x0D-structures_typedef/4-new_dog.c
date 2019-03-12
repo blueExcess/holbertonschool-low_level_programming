@@ -16,14 +16,12 @@ char *countAndPoint(char *s)
 
 	if (s == NULL)
 		return (NULL);
-	while (*p)
+	while (s[x])
 	{
-		p++;
 		x++;
 	}
-	p = s;
-	p = malloc((sizeof(*p) * x) + 1);
-	while (p[z])
+	p = malloc(sizeof(*p) * x + 1);
+	while (s[z])
 	{
 		p[z] = s[z];
 		z++;
