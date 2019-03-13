@@ -1,0 +1,17 @@
+/* 3. main for program */
+#include "3-calc.h"
+
+/**
+ * main - accept args and then convert to ints
+ * @argc: num of args given
+ * @argv: args given
+ *
+ * Return: value of calc
+ */
+int main(int argc, char *argv[])
+{
+	if (argc != 4)
+	{
+		puts("Error");
+		exit (98);
+	}

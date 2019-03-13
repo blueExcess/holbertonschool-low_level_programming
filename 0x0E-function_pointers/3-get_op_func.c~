@@ -1,0 +1,7 @@
+/* select and run the required function */
+
+/**
+ * get_op_function - chose function based on symbol passed
+ * @s: symbol passed
+ *
+ * Return: int
