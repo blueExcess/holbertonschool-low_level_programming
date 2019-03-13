@@ -1,5 +1,15 @@
 # holbertonschool-low_level_programming
 
-Work on: 8, 9, and 11 (and advanced)
+Here lie ye old low level programmimg lessons from Holberton. Yar.
 
-8- possible w/o 5 deep for loops?
+Avast ye land lubbers! 
+
+Abandon joy all ye who enter here...
+
+Also, I stole your soul while you were reading this. 
+
+I'll sell it back to you. 
+
+Send me your bank account and routing number. 
+
+Thanks.
