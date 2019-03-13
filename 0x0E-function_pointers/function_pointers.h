@@ -1,5 +1,11 @@
 #ifndef _THIS_FILE_
 #define _THIS_FILE_
+#include <stdlib.h>
+#include <stdio.h>
+
+
+
+
 
 /* prototypes */
 void print_name(char *name, void (*f)(char *));
