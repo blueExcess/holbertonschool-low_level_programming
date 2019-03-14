@@ -11,7 +11,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes = 0;
+	int bytes = 0, x;
+	unsigned char *pm = (unsigned char *)main;
 
 	if (argc != 2)
 	{
@@ -24,7 +25,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-/* Now to call assembly code on __FILE__ from here somehow - macro? */
-
+	for (x = 0; x <= bytes; x++)
+	{
+		/* cycle through pointer and print - how to format? */
+	}
 	return (0);
 }
