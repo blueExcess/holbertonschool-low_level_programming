@@ -4,8 +4,8 @@
 
 /**
  * main - print opcodes of own function
- * @argc - number of args
- * @argv - arguments
+ * @argc: number of args
+ * @argv: arguments
  *
  * Return: 0 on success
  */
@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 	for (x = 0; x <= bytes; x++)
 	{
 		/* cycle through pointer and print - how to format? */
+		printf("%2h", pm[x]);
 	}
 	return (0);
 }
