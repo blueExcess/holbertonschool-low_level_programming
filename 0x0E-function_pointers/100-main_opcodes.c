@@ -12,10 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes = 0, x;
-	void *temp;
-
-	temp = &main;
-	unsigned char *pm = temp;
+	unsigned char *pm;
 
 	if (argc != 2)
 	{
@@ -28,10 +25,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	pm = (unsigned char *)&main;
 	for (x = 0; x <= bytes; x++)
 	{
-		/* cycle through pointer and print - how to format? */
-		printf("%02x", pm[x]);
+		/* cycle through pointer and print */
+		if (x < bytes)
+			printf("%02hx ", pm[x]);
+		else
+			printf("%02hx\n", pm[x]);
 	}
 	return (0);
 }
