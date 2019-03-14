@@ -31,8 +31,7 @@ int main(int argc, char *argv[])
 		/* cycle through pointer and print */
 		if (x < bytes)
 		{
-			printf("%02hx", pm[x]);
-			printf(" ");
+			printf("%02hx ", pm[x]);
 		else
 			printf("%02hx\n", pm[x]);
 	}
