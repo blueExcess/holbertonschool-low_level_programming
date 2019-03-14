@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	pm = (unsigned char *)&main;
-	for (x = 0; x <= bytes; x++)
+	for (x = 0; x < bytes; x++)
 	{
 		/* cycle through pointer and print */
-		if (x < bytes)
+		if (x < bytes - 1)
 			printf("%02hx ", pm[x]);
 		else
 			printf("%02hx\n", pm[x]);
