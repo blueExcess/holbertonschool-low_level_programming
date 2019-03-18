@@ -20,7 +20,10 @@ char *rot13(char *str)
 		for (position = 13; *let; let++, position++)
 		{
 			if (*s == *let)
+			{
 				*s = o[position];
+				break;
+			}
 		}
 		let = letters;
 		s++;
