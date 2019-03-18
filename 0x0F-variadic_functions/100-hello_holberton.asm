@@ -8,7 +8,7 @@
 main:
 	mov	rax, 1		;R0
 	mov	rdi, 1		;R7
-	mov	rsi, message	;R6
+	mov	rsi, hi		;R6
 	mov	rdx, 17		;R2
 	syscall
 	mov	rax, 60		;R0
@@ -16,4 +16,4 @@ main:
 	syscall
 
 	section .data
-message db	"Hello, Holberton", 10
+hi 	 db	"Hello, Holberton", 10
