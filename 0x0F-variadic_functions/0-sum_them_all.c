@@ -21,7 +21,7 @@ int sum_them_all(unsigned int n, ...)
 	for (i = n; i; i--)
 		sum += va_arg(sally, int);
 
-	va_end(valist);
+	va_end(sally);
 
 	return (sum);
 }
