@@ -3,7 +3,7 @@
 
 /**
  * print_list - print out the linked list
- * @h: list to print out
+ * h - list to print out
  *
  * Return: size of something
  */
