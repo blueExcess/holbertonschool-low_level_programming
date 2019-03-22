@@ -1,0 +1,5 @@
+/* 1. function to print out number of elements in linked list */
+#include "lists.h"
+
+/**
+ * list_len - 
