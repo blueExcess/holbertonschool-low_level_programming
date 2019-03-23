@@ -30,6 +30,7 @@ unsigned int lenlen(const char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *end = *head;
+	char *temp;
 
 	if (head == NULL)
 		return (NULL);
@@ -45,7 +46,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		new->str = strdup(str);
+		temp = strdup(str);
+		if (temp == NULL)
+		{
+			free(new);
+			return (NULL);
+		}
+		new->str = temp;
 		new->len = lenlen(str);
 	}
 	new->next = NULL;
@@ -57,5 +64,5 @@ list_t *add_node_end(list_t **head, const char *str)
 			end = end->next;
 		end->next = new;
 	}
-	return (end);
+	return (new);
 }
