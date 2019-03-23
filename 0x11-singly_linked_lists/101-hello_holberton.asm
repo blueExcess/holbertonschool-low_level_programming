@@ -14,10 +14,11 @@ main:	mov	rdi, hello	; was rdi, format
 	call	printf
 
 	pop	rbp
+	mov	rax, 0
 	;; add	rsp, 8		; return stack to prev. loc.
-	mov	rax, 60		; call exit
-	xor	rdi, rdi	; exit 0
-	syscall			; execute exit
+	;; mov	rax, 60		; call exit
+	;; xor	rdi, rdi	; exit 0
+	;; syscall		; execute exit
 
 
 
