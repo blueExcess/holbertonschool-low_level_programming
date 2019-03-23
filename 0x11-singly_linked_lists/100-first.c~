@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+void __attribute__ ((constructor)) premain()
+{
+	printf("premain()\n");
+}
+
+int main(int argc, char *argv[])
+{
+	printf("main()\n");
+	return 0;
+}
