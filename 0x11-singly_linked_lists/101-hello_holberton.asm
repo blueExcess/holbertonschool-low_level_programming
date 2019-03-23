@@ -6,9 +6,9 @@
 	extern printf
 
 	section .text
-main:	mov	rdi, hello
+main:	mov	rdi, hello	; was rdi, format
 	;; mov	rsi, hello
-	xor	rax, rax
+	;; xor	rax, rax
 	sub	rsp, 8		; align stack b/f call
 	call	printf
 
@@ -22,6 +22,3 @@ main:	mov	rdi, hello
 	section .data
 ;; format	db	"%s", 10, 0
 hello	db	"Hello, Holberton", 10, 0
-
-;; why was aligning the stack not needed and causing seg fault?
-;; Isn't it supposed to be aligned to 16-bit before any call?
