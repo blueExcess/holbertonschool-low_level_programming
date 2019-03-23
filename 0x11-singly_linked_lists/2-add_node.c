@@ -7,11 +7,11 @@
  *
  * Return: length of string
  */
-int lenlen(const char *str)
+unsigned int lenlen(const char *str)
 {
-	int count;
+	unsigned int count;
 
-	while (str)
+	while (*str)
 	{
 		count++;
 		str++;
