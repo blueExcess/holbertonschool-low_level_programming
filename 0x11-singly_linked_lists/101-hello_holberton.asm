@@ -9,13 +9,13 @@
 main:	mov	rdi, hello	; was rdi, format
 	;; mov	rsi, hello
 	xor	rax, rax
-	;; sub	rsp, 8		; align stack b/f call
-	push	rbp
+	sub	rsp, 8		; align stack b/f call
+	;; push	rbp
 	call	printf
 
-	pop	rbp
+	;; pop	rbp
 	mov	rax, 0
-	;; add	rsp, 8		; return stack to prev. loc.
+	add	rsp, 8		; return stack to prev. loc.
 	;; mov	rax, 60		; call exit
 	;; xor	rdi, rdi	; exit 0
 	;; syscall		; execute exit
