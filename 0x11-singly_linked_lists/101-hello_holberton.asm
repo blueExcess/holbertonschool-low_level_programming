@@ -10,7 +10,6 @@ main:	mov	rdi, hello
 	xor	rax, rax
 	;; sub	rsp, 8		; align stack b/f call
 	call	printf
-	ret
 	;; add	rsp, 8		; return stack to prev. loc.
 	mov	rax, 60		; call exit
 	xor	rdi, rdi	; exit 0
