@@ -8,11 +8,13 @@
 	section .text
 main:	mov	rdi, hello	; was rdi, format
 	;; mov	rsi, hello
-	;; xor	rax, rax
-	sub	rsp, 8		; align stack b/f call
+	xor	rax, rax
+	;; sub	rsp, 8		; align stack b/f call
+	push	rbp
 	call	printf
 
-	add	rsp, 8		; return stack to prev. loc.
+	pop	rbp
+	;; add	rsp, 8		; return stack to prev. loc.
 	mov	rax, 60		; call exit
 	xor	rdi, rdi	; exit 0
 	syscall			; execute exit
