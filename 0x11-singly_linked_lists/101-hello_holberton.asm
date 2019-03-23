@@ -9,9 +9,9 @@
 main:	mov	rdi, format
 	mov	rsi, hello
 	xor	rax, rax
-	;; sub	rsp, 8		; align stack b/f call
+	sub	rsp, 8		; align stack b/f call
 	call	printf
-	;; add	rsp, 8		; return stack to prev. loc.
+	add	rsp, 8		; return stack to prev. loc.
 	mov	rax, 60		; call exit
 	xor	rdi, rdi	; exit 0
 	syscall			; execute exit
