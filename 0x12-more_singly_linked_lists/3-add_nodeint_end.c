@@ -12,6 +12,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new, *end = *head;
 
+/* check for bad pointer */
 	if (head == NULL)
 		return (NULL);
 
@@ -22,6 +23,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new->n = n;
 	new->next = NULL;
 
+/* check if list is empty */
 	if (*head == NULL)
 		*head = new;
 	else

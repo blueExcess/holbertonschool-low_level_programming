@@ -11,3 +11,27 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
+	listint_t *new, *ind;
+
+	if (head == NULL)
+		return (NULL);
+/* set new and ind to beginning position */
+	new = *head;
+	ind = *head;
+/* creating new node */
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+/* cycle to correct position */
+	for (idx--; idx; idx--)
+		ind = ind->next;
+	printf("idx = %i\n", idx);
+	if (idx > 0)
+		return (NULL);
+/* set member values of new */
+	new->n = n;
+	new->next = ind->next;
+	ind->next = new;
+
+	return (new);
+}
