@@ -16,11 +16,11 @@ void print_binary(unsigned long int n)
 		putchar('0');
 		return;
 	}
-	for (; copy; copy >>= 1, mask <<= 1, count++)
+	for (; copy > 1; copy >>= 1, mask <<= 1, count++)
 		;
 	for (; mask; mask >>= 1, count--)
 	{
 		result = (n & mask) >> count;
-		putchar(result + '0');
+			putchar(result + '0');
 	}
 }
