@@ -20,14 +20,17 @@ unsigned int binary_to_uint(const char *b)
 	/* bin[0] = '0'; */
 	for (i = 0; b[i]; i++)
 	{
-		if (*b != '0' && *b != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
 
 	for (i--; i >= 0; i--, x *= 2)
+	{
 		if (b[i] == '1' && b[i + 1] == '\0')
 			sum++;
 		else if (b[i] == '1')
 			sum += x;
+	}
+
 	return (sum);
 }
