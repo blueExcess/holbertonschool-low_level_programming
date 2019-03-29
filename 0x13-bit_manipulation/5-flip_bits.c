@@ -10,6 +10,7 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	int i;
 	unsigned long int tN = 0, tM = 0, notSame = 0, isSame = 0;
 
 	for (i = 63; i >= 0; i--)
