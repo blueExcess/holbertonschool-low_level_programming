@@ -11,7 +11,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd = 0;
-	ssize_t ret = 0, bytesRead, bytesWritten;
+	ssize_t bytesRead, bytesWritten;
+	size_t ret = 0;
 	char buffer[BUFFSIZE];
 
 	if (filename == NULL || letters == 0)
@@ -33,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	} while (ret < letters && bytesWritten == bytesRead);
 	if (bytesRead < 0 || bytesWritten < 0)
 		return (0);
-	close (fd);
+	close(fd);
 	return (ret);
 }
 
@@ -50,7 +51,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
  */
 ssize_t write_all(int file, char *buffer, size_t count)
 {
-	ssize_t write_last, write_total = 0;
+	ssize_t write_last;
+	size_t write_total = 0;
 
 	if (buffer == NULL || file < 0 || count < 1)
 		return (-1);
