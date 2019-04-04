@@ -10,17 +10,20 @@
  */
 int _atoi(char *s)
 {
-	int x;
-	char arr[];
+	int retVal = 0;
+	signed char negative = 0;
+	char *arr;
 
-	while (*s)
+	for (arr = s; (*arr < '0' || *arr > '9') && *arr; arr++)
+		if (*arr == '-')
+			negative = !negative;
+	for (; *arr >= '0' && *arr <= '9'; arr++)
 	{
-		x++;
-		if (*s >= 48 && *s <= '9')
-			conv[i] = *s;
+		retVal *= 10;
+		if (negative == 1)
+			retVal -= *arr - '0';
+		else
+			retVal += *arr - '0';
 	}
+	return (retVal);
 }
-
-/* need to check if each value = ascii number, if yes */
-/* then need to enter into second array. From there */
-/* convert via lookup table or switch statement. */
