@@ -33,7 +33,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = temp;
 		return (temp);
 	}
-	for (; idx && seek->next; seek = seek->next, idx--)
+	for (; idx && seek; seek = seek->next, idx--)
 		;
 	if (idx)
 		return (NULL);
