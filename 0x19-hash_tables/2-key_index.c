@@ -1,3 +1,4 @@
+/* 2. hash key and return index */
 #include "hash_tables.h"
 
 /**

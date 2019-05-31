@@ -1,3 +1,4 @@
+/* 0. Create hash table. */
 #include "hash_tables.h"
 
 /**

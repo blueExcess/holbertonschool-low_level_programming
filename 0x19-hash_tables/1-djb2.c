@@ -1,3 +1,4 @@
+/* 1. hash given keys. */
 #include "hash_tables.h"
 
 /**
