@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 		for (; s; s = s->next)
 		{
 			if (s && i != j)
-				printf("'%s': '%s, '", s->key, s->value);
+				printf("'%s': '%s', ", s->key, s->value);
 			else if (s && i == j)
 				printf("'%s': '%s'", s->key, s->value);
 		}
