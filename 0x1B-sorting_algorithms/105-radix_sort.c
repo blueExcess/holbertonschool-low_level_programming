@@ -11,7 +11,7 @@ void radix_sort(int *array, size_t size)
 {
 	int i = 0, max = 0, exp = 1;
 
-	if (array == NULL)
+	if (array == NULL || size < 2))
 		return;
 	/* get max value (and no. of digits) */
 	for (; i < (int)size; i++)
