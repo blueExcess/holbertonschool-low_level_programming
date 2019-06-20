@@ -48,6 +48,6 @@ void counting_sort_E(int *array, size_t size, int exp)
 	}
 	for (i = 0; i < (int)size; i++)
 		array[i] = out[i];
-	print_array(values, size);
+	print_array(array, size);
 	free(out);
 }
