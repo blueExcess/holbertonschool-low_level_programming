@@ -32,7 +32,7 @@ void radix_sort(int *array, size_t size)
  */
 void counting_sort_E(int *array, size_t size, int exp)
 {
-	int *out, i, values[10] = {0};
+	int *out, i, values[10] = {0}, x = 0;
 
 	out = malloc(sizeof(int) * size);
 	if (out == NULL)
@@ -43,8 +43,9 @@ void counting_sort_E(int *array, size_t size, int exp)
 		values[i] += values[i - 1];
 	for (i = size - 1; i >= 0; i--)
 	{
-		out[values[(array[i] / exp) % 10] - 1] = array[i];
-		values[(array[i] / exp) % 10]--;
+		x = (array[i] / exp) % 10;
+		out[values[x] - 1] = array[i];
+		values[x]--;
 	}
 	for (i = 0; i < (int)size; i++)
 		array[i] = out[i];
