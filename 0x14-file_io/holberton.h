@@ -13,6 +13,7 @@ int append_text_to_file(const char *filename, char *text_content);
 
 
 ssize_t write_all(int file, char *buffer, size_t count);
+void rAw(int from, int to, char *src, char *dest, char *buffer);
 
 
 

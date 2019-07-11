@@ -10,10 +10,8 @@ main:	mov	rdi, hello	; was rdi, format
 	;; mov	rsi, hello
 	xor	rax, rax
 	sub	rsp, 8		; align stack b/f call
-	;; push	rbp
 	call	printf
 
-	;; pop	rbp
 	mov	rax, 0
 	add	rsp, 8		; return stack to prev. loc.
 	;; mov	rax, 60		; call exit
@@ -25,3 +23,5 @@ main:	mov	rdi, hello	; was rdi, format
 	section .data
 ;; format	db	"%s", 10, 0
 hello	db	"Hello, Holberton", 10, 0
+
+;; why is checker forcing rax = 0?
