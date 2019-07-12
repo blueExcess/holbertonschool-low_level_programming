@@ -4,9 +4,8 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-.PHONY: all
 
 clean:
 	$(RM) -f $(NAME) *~
@@ -17,7 +16,5 @@ oclean:
 .PHONY: oclean
 
 fclean: clean oclean
-.PHONY: fclean
 
 re: oclean all
-.PHONY: re
