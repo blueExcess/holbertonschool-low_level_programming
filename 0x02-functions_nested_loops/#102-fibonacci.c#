@@ -1,0 +1,28 @@
+1/* 14 (advanced) - print first 50 fibonacci numbers */
+
+#include <stdio.h>
+
+/**
+ * main - print first 50 fibonacci numbers
+ *
+ * Return: 0 on success
+ */
+int main(void)
+{
+	int i;
+	unsigned long int fib[51];
+
+	fib[0] = 0;
+	fib[1] = 1;
+
+	for (i = 2; i < 53; i++)
+		fib[i] = fib[i - 2] + fib[i - 1];
+	for (i = 2; i < 52; i++)
+	{
+		if (i == 51)
+			printf("%lu\n", fib[i]);
+		else
+			printf("%lu, ", fib[i]);
+	}
+	return (0);
+}
