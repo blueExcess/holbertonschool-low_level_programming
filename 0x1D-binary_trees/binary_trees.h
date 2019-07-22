@@ -76,6 +76,10 @@ heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
+/* print function */
 void binary_tree_print(const binary_tree_t *);
+
+/* helper functions */
+void tree_shreader(binary_tree_t *node);
 
 #endif /* BINARY_TREES_H */
