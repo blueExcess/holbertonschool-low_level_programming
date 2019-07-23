@@ -81,5 +81,6 @@ void binary_tree_print(const binary_tree_t *);
 
 /* helper functions */
 void tree_shreader(binary_tree_t *node);
+int bigger(int a, int b);
 
 #endif /* BINARY_TREES_H */
