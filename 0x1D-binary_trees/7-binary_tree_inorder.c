@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_inorder - go through BT using inorder deep-search.
+ * binary_tree_inorder - go through BT using inorder depth-first search..
  * @tree: root of tree.
  * @func: function to call.
  *
