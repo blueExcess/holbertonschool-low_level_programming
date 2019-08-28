@@ -3,12 +3,12 @@
 #include "search_algos.h"
 
 /**
- * linear_search - search using linear algorithm
- * @array: array to search
- * @size: size of array
- * @value: value to search for
+ * linear_search - search using linear algorithm.
+ * @array: array to search.
+ * @size: size of array.
+ * @value: value to search for.
  *
- * Return: -1 if not available or null
+ * Return: -1 if not available or null.
  */
 int linear_search(int *array, size_t size, int value)
 {
